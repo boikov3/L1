@@ -1,0 +1,71 @@
+C:\Users\Ilya\.CLion2019.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/Ilya/lab-01-parser
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/Ilya/.hunter
+-- [hunter] [ Hunter-ID: 9a3594a | Toolchain-ID: 0a1854b | Config-ID: c351cc1 ]
+-- [hunter] NLOHMANN_JSON_ROOT: /home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/Install (ver.: 3.6.1)
+-- [hunter] Building nlohmann_json
+loading initial cache file /home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/cache.cmake
+loading initial cache file /home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/Build/nlohmann_json/args.cmake
+-- The C compiler identification is GNU 7.4.0
+-- The CXX compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++.exe
+-- Check for working CXX compiler: /usr/bin/c++.exe -- works
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/Build/nlohmann_json/Build
+Scanning dependencies of target nlohmann_json-Release
+[  6%] Creating directories for 'nlohmann_json-Release'
+[ 12%] Performing download step (download, verify and extract) for 'nlohmann_json-Release'
+-- verifying file...
+       file='/home/Ilya/.hunter/_Base/Download/nlohmann_json/3.6.1/581e1d1/v3.6.1.tar.gz'
+-- File already exists and hash match (skip download):
+  file='/home/Ilya/.hunter/_Base/Download/nlohmann_json/3.6.1/581e1d1/v3.6.1.tar.gz'
+  SHA1='581e1d1c89c65670fb5212d74493a4545d9ab91c'
+-- extracting...
+     src='/home/Ilya/.hunter/_Base/Download/nlohmann_json/3.6.1/581e1d1/v3.6.1.tar.gz'
+     dst='/home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/Build/nlohmann_json/Source'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+CMake Error at Build/nlohmann_json-Release-prefix/src/nlohmann_json-Release-stamp/extract-nlohmann_json-Release.cmake:51 (file):
+  file RENAME failed to rename
+
+    /home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/Build/nlohmann_json/ex-nlohmann_json-Release1237/json-3.6.1
+
+  to
+
+    /home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/Build/nlohmann_json/Source
+
+  because: Permission denied
+
+
+
+make[2]: *** [CMakeFiles/nlohmann_json-Release.dir/build.make:94: nlohmann_json-Release-prefix/src/nlohmann_json-Release-stamp/nlohmann_json-Release-download] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/nlohmann_json-Release.dir/all] Error 2
+make: *** [Makefile:84: all] Error 2
+
+[hunter ** FATAL ERROR **] Build step failed (dir: /home/Ilya/.hunter/_Base/9a3594a/0a1854b/c351cc1/Build/nlohmann_json
+[hunter ** FATAL ERROR **] [Directory:/home/Ilya/.hunter/_Base/Download/Hunter/0.23.218/9a3594a/Unpacked/cmake/projects/nlohmann_json]
+
+------------------------------ ERROR -----------------------------
+    https://docs.hunter.sh/en/latest/reference/errors/error.external.build.failed.html
+------------------------------------------------------------------
+
+CMake Error at /home/Ilya/.hunter/_Base/Download/Hunter/0.23.218/9a3594a/Unpacked/cmake/modules/hunter_error_page.cmake:12 (message):
+Call Stack (most recent call first):
+  /home/Ilya/.hunter/_Base/Download/Hunter/0.23.218/9a3594a/Unpacked/cmake/modules/hunter_fatal_error.cmake:20 (hunter_error_page)
+  /home/Ilya/.hunter/_Base/Download/Hunter/0.23.218/9a3594a/Unpacked/cmake/modules/hunter_download.cmake:617 (hunter_fatal_error)
+  /home/Ilya/.hunter/_Base/Download/Hunter/0.23.218/9a3594a/Unpacked/cmake/projects/nlohmann_json/hunter.cmake:127 (hunter_download)
+  /home/Ilya/.hunter/_Base/Download/Hunter/0.23.218/9a3594a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)
+  CMakeLists.txt:26 (hunter_add_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/cygdrive/c/Users/Ilya/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeOutput.log".
