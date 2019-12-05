@@ -122,13 +122,13 @@ void Json::sozdaybt_massiva(const string& s) {
             word = slovo(i, s);
             i = uberi_probely(i, s);
             this->json_arr.emplace_back(word);
-        } else if (s.substr(i,4)=="true" || s.substr(i,5)=="false") { 
-            if(s[i] == 't') { 
-            i += 4; 
+        }else if (s.substr(i, 4) == "true" || s.substr(i, 5) == "false"){
+            if (s[i] == 't') {
+              i += 4; 
             this->json_arr.emplace_back(true);
-            }else { 
-            i += 5; 
-            this->json_arr.emplace_back(false);
+            } else { 
+            i += 5;
+           this->json_arr.emplace_back(false);
         }} else if (s[i] == '[') {
             string s1;
             unsigned int n = Nalichie_skobok(i, s);
@@ -179,12 +179,12 @@ void Json::sozdaybt_map(const string& s) {
             word = slovo(i, s);
             i = uberi_probely(i, s);
             this->json_map[key] = word;
-       } else if (s.substr(i, 4) == "true" || s.substr(i, 5) == "false") { 
-        if (s[i] == 't') { 
-            i += 4; 
+       }else if (s.substr(i, 4) == "true" || s.substr(i, 5) == "false"){
+        if (s[i] == 't') {
+            i += 4;
         this->json_map[key] = true;
-            } else { 
-            i += 5; 
+            } else {
+            i += 5;
          this->json_map[key] = false;
         }} else if (s[i] == '[') {
             string s1;
