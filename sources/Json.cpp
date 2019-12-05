@@ -126,13 +126,10 @@ void Json::sozdaybt_massiva(const string& s) {
             if(s[i] == 't') { 
             i += 4; 
             this->json_arr.emplace_back(true);
-                } 
-            else { 
+            }else { 
             i += 5; 
             this->json_arr.emplace_back(false);
-        }
- 
-        } else if (s[i] == '[') {
+        }} else if (s[i] == '[') {
             string s1;
             unsigned int n = Nalichie_skobok(i, s);
             if (n == s.length())
@@ -183,14 +180,13 @@ void Json::sozdaybt_map(const string& s) {
             i = uberi_probely(i, s);
             this->json_map[key] = word;
        } else if (s.substr(i, 4) == "true" || s.substr(i, 5) == "false") { 
-if (s[i] == 't') { 
-i += 4; 
-this->json_map[key] = true;
-} else { 
-i += 5; 
-  this->json_map[key] = false;
-}
-        } else if (s[i] == '[') {
+        if (s[i] == 't') { 
+            i += 4; 
+        this->json_map[key] = true;
+            } else { 
+            i += 5; 
+         this->json_map[key] = false;
+        }} else if (s[i] == '[') {
             string s1;
             unsigned int  n = Nalichie_skobok(i, s);
             if ( n == s.length())
