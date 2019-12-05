@@ -124,9 +124,9 @@ void Json::sozdaybt_massiva(const string& s) {
             this->json_arr.emplace_back(word);
         }else if (s.substr(i, 4) == "true" || s.substr(i, 5) == "false"){
             if (s[i] == 't') {
-              i += 4; 
+              i += 4;
             this->json_arr.emplace_back(true);
-            } else { 
+            } else {
             i += 5;
            this->json_arr.emplace_back(false);
         }} else if (s[i] == '[') {
